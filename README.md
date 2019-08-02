@@ -50,5 +50,8 @@ Blob 文件引用自 `download()`，内置提供对当前Blob文件的本地下�
 
 ## Changelog
 
+### v0.0.3
+- 增强 download 文件名的默认缺省支持
+
 ### v0.0.2
 - 修复相关细节，完善 d.ts 类型定义

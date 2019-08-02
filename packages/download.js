@@ -1,9 +1,11 @@
 /**
  * 立即下载 Blob 文件数据
- * @param {Blob} blob
- * @param {String} fullname
+ * @param {Blob} blob 文件数据
+ * @param {String} [fullname] 文件名（若不设置后缀名，则自动根据 blob.type 进行检测并设置）
  */
 export default function download(blob, fullname) {
+  fullname = fullname || 'untitled';
+
   if (typeof window.navigator.msSaveBlob !== 'undefined') {
     // IE workaround for "HTML7007: One or more blob URLs were
     // revoked by closing the blob for which they were created.

@@ -1,50 +1,54 @@
 {
-	"name": "@mudas/file",
-	"version": "0.0.3",
-	"description": "A library project using commonjs type",
-	"author": "mudas",
-	"license": "MIT",
-	"main": "dist/file.common.js",
-	"homepage": "",
-	"repository": {
-		"type": "git",
-		"url": ""
-	},
-	"keywords": [],
-	"scripts": {
-		"serve": "vue-cli-service serve",
-		"build": "vue-cli-service build --target lib --name file packages/index.js",
+  "name": "@mudas/file",
+  "version": "0.0.4",
+  "description": "A library project using commonjs type",
+  "author": "mudas",
+  "license": "MIT",
+  "main": "dist/file.common.js",
+  "sideEffects": false,
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name file packages/index.js",
     "report": "vue-cli-service build --target lib --name file packages/index.js --report",
-		"lint": "vue-cli-service lint",
-		"test:unit": "vue-cli-service test:unit",
-		"pub": "npm run build && npm publish --access=public"
-	},
-	"typings": "types/index.d.ts",
-	"files": [
-		"dist",
-		"types",
-		"package.json",
-		"README.md"
-	],
-	"dependencies": {
-		"mime": "^2.4.4"
-	},
-	"devDependencies": {
-		"@vue/cli-plugin-babel": "^3.8.0",
-		"@vue/cli-plugin-eslint": "^3.8.0",
-		"@vue/cli-plugin-unit-jest": "^3.8.0",
-		"@vue/cli-service": "^3.8.0",
-		"@vue/eslint-config-airbnb": "^4.0.0",
-		"@vue/test-utils": "1.0.0-beta.29",
-		"babel-core": "7.0.0-bridge.0",
-		"babel-eslint": "^10.0.1",
-		"babel-jest": "^23.6.0",
-		"core-js": "^2.6.5",
-		"element-ui": "^2.9.2",
-		"eslint": "^5.16.0",
-		"eslint-plugin-vue": "^5.0.0",
-		"happypack": "^5.0.1",
-		"vue": "^2.6.10",
-		"vue-template-compiler": "^2.6.10"
-	}
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit",
+    "pub": "npm run build && npm publish --access=public"
+  },
+  "typings": "types/index.d.ts",
+  "files": [
+    "dist",
+    "types",
+    "package.json",
+    "README.md"
+  ],
+  "dependencies": {},
+  "peerDependencies": {
+    "mime": "^2.4.4",
+    "core-js": "^2.6.5"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-plugin-unit-jest": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "core-js": "^2.6.5",
+    "element-ui": "^2.9.2",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "happypack": "^5.0.1",
+    "mime": "^2.4.4",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  }
 }

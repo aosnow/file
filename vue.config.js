@@ -14,6 +14,10 @@ function resolve(...dir) {
   return path.join(__dirname, ...dir);
 }
 
+// 排除所有不必要的模块，让宿主环境去安排必要的第三方包
+const regexp = /^(core-js|mime)/i;
+const externals = isDebug ? '' : [regexp];
+
 module.exports = {
   publicPath: isDebug ? '/' : './',
   outputDir: 'dist',
@@ -39,13 +43,14 @@ module.exports = {
 
     // 不分割任何模块
     optimization: {
-      splitChunks: false
+      // 开发时爱怎么分割怎么分，少做点合并包的事应该会快点吧
+      splitChunks: isDebug ? {} : false
     },
 
     // 排除外部库（如使用CDN或引用本地JS库）
-    externals: {},
+    externals,
 
-    // 复制插件
+    // 插件
     plugins: [
       new HappyPack({
         id: 'happyBabel',

@@ -1,7 +1,7 @@
 {
   "name": "@mudas/file",
-  "version": "0.0.4",
-  "description": "A library project using commonjs type",
+  "version": "0.0.5",
+  "description": "Simplified Blob Encapsulation to Support File Construction, Download and Upload",
   "author": "mudas",
   "license": "MIT",
   "main": "dist/file.common.js",

@@ -1,9 +1,16 @@
 # @mudas/file
 
-> 简化的 Blob 对象封装，对文件构建、下载、上传提供基础数据支持.
+> 简化的 Blob 对象封装，对文件构建、下载、上传提供基础数据支持.  
+Simplified Blob Encapsulation to Support File Construction, Download and Upload
 
-## README
-### BlobFile
+## Setup
+`mime` 未构建到 `@mudas/file`中，用户可自行单独升级。
+```npm
+npm i @mudas/file core-js mime -S
+```
+
+## Usage
+### 1、BlobFile
 简化的 Blob 对象封装，可方便的通过运行时内容产出实体文件用于上传或者下载到本地。
 ```ecmascript 6
 /**
@@ -33,7 +40,7 @@ get fullname();
 download();
 ```
 
-### Mime
+### 2、Mime
 use `mime 2.4.4`，来做为 blob 文件 mime types 的支撑。
 若需要对文件后缀信息进行扩展，请参照以下方法：
 ```ecmascript 6
@@ -45,10 +52,13 @@ Mime.define({
 // false - 代表不覆盖原有配置，而只扩充
 ```
 
-### download
+### 3、download
 Blob 文件引用自 `download()`，内置提供对当前Blob文件的本地下载功能。
 
 ## Changelog
+
+### v0.0.5
+- 更新 README
 
 ### v0.0.4
 - 优化构建规则，优化输出包

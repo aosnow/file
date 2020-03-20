@@ -5,9 +5,6 @@
 // ------------------------------------------------------------------------------
 
 const path = require('path');
-const HappyPack = require('happypack');
-const os = require('os');
-const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length });
 const isDebug = process.env.NODE_ENV === 'development';
 
 function resolve(...dir) {
@@ -48,16 +45,7 @@ module.exports = {
     },
 
     // 排除外部库（如使用CDN或引用本地JS库）
-    externals,
-
-    // 插件
-    plugins: [
-      new HappyPack({
-        id: 'happyBabel',
-        loaders: [{ loader: 'babel-loader?cacheDirectory=true' }],
-        threadPool: happyThreadPool
-      })
-    ]
+    externals
   },
 
   chainWebpack: (config) => {
